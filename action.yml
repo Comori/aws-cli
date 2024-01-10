@@ -1,13 +1,27 @@
-name: Hello, World!
-description: Greet someone and record the time
-author: GitHub Actions
+name: aws-cli
+description: aws cli 
+author: Comori
 
 # Define your inputs here.
 inputs:
-  who-to-greet:
+  aws-access-key-id:
+    description: "AWS access key id to access your bucket"
+    required: true
+  aws-secret-access-key:
+    description: "AWS secret access key to access your bucket"
+    required: true
+  aws-region:
+    description: "AWS region where your bucket is located"
+    required: true
+    default: us-east-1
+  module:
+    required: true
+    default: s3
+  bucket:
+    description: "AWS s3 bucket to store the artifacts"
+  files:
     description: Who to greet
     required: true
-    default: World
 
 # Define your outputs here.
 outputs:

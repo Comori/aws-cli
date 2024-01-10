@@ -55,7 +55,13 @@ jobs:
         id: test-action
         uses: ./
         with:
-          who-to-greet: GitHub
+          aws-access-key-id: GitHub
+          aws-secret-access-key: dddd
+          aws-region: ddddd
+          module: lllll
+          bucket: nmnmnmn
+          files: |
+            dist/*
 
       - name: Print Output
         id: output
